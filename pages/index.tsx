@@ -3,21 +3,24 @@ import { getVendorsData } from "../lib/vendors";
 import Layout from "../components/Layout";
 
 export async function getStaticProps() {
-  const vendorsData = await getVendorsData();
+  const vendors = await getVendorsData();
 
   return {
     props: {
-      vendorsData,
+      vendors,
     },
   };
 }
 
-const IndexPage = ({ vendorsData }) => (
+const IndexPage = ({ vendors }) => (
   <Layout title="Food delivery - Shop">
-    <h1>{vendorsData}</h1>
-    <p>
-      <Link href="/about">About</Link>
-    </p>
+    <ul>
+      {vendors.map((vendor) => (
+        <li key={vendor}>
+          <Link href={`/shop/${vendor}`}>{vendor}</Link>
+        </li>
+      ))}
+    </ul>
   </Layout>
 );
 

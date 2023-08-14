@@ -1,9 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "debug": "cross-env NODE_OPTIONS='--inspect' next dev"
   },
   "dependencies": {
     "next": "latest",
