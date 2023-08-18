@@ -1,5 +1,5 @@
 // TODO: extract to env variable
-const API_URL = "https://dungarees-crow.cyclic.app/api/";
+/*const API_URL = "https://dungarees-crow.cyclic.app/api/";
 
 export const getVendorsData = async () => {
   try {
@@ -13,4 +13,4 @@ export const getVendorsData = async () => {
 
     return [];
   }
-};
+};*/
