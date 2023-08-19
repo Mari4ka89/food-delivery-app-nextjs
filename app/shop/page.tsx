@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { getVendors } from "../api/getVendors";
+import { getVendors } from "../api/vendors/getVendors";
 
 export const metadata: Metadata = {
   title: "Shop | Food Delivery",

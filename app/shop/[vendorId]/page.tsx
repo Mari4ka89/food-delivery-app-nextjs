@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { API_URL } from "../page";
+import { API_URL } from "../../api/vendors/getVendors";
 
 type MenuItemsProps = {
   params: {
