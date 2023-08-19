@@ -1,22 +1,10 @@
 import { Metadata } from "next";
 import Link from "next/link";
-
-// TODO: extract to env variable
-export const API_URL = "https://dungarees-crow.cyclic.app/api/";
+import { getVendors } from "../api/getVendors";
 
 export const metadata: Metadata = {
   title: "Shop | Food Delivery",
 };
-
-async function getVendors() {
-  const response = await fetch(`${API_URL}products/categories`, {
-    next: {
-      revalidate: 60,
-    },
-  });
-
-  return response.json();
-}
 
 export default async function Shop() {
   const vendors = await getVendors();
