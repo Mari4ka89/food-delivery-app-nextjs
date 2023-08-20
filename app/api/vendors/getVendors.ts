@@ -1,10 +1,7 @@
 import "server-only";
 
-// TODO: extract to env variable
-export const API_URL = "https://dungarees-crow.cyclic.app/api/";
-
 export async function getVendors() {
-  const response = await fetch(`${API_URL}products/categories`, {
+  const response = await fetch(`${process.env.API_URL}products/categories`, {
     next: {
       revalidate: 60,
     },
@@ -14,5 +11,5 @@ export async function getVendors() {
     throw new Error("Unable to fetch vendors.");
   }
 
-  return response.json();
+  return (await response.json()) as string[];
 }
