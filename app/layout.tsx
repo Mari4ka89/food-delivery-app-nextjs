@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <div>
           <Header />
-          <main className="flex flex-row">{children}</main>
+          <main className="flex flex-row container">{children}</main>
           <Footer />
         </div>
       </body>

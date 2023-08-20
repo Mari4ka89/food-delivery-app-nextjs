@@ -21,13 +21,10 @@ export default async function MenuItems({
   const menuItems = await getMenuItems(vendorId);
 
   return (
-    <div>
-      MenuItems {vendorId}:
-      <ul>
-        {menuItems.map((item: any) => (
-          <li key={item.id}>{item.title}</li>
-        ))}
-      </ul>
-    </div>
+    <ul>
+      {menuItems.map((item: any) => (
+        <li key={item.id}>{item.title}</li>
+      ))}
+    </ul>
   );
 }
