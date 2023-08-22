@@ -1,5 +1,6 @@
 import "server-only";
 import type { MenuItem } from "./menuItem";
+import { notFound } from "next/navigation";
 
 export async function getMenuItems(vendorId: string) {
   const response = await fetch(
@@ -15,5 +16,11 @@ export async function getMenuItems(vendorId: string) {
     throw new Error("Unable to fetch menu items.");
   }
 
-  return (await response.json()) as MenuItem[];
+  const menuItems = (await response.json()) as MenuItem[];
+
+  if (menuItems.length === 0) {
+    notFound();
+  }
+
+  return menuItems;
 }

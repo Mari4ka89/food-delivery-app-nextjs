@@ -13,9 +13,9 @@ export default async function ShopLayout({ children }: ShopLayoutProps) {
   return (
     <>
       <div className="basis-1/3">
-        <h2>Shops:</h2>
+        <h2 className="text-center">Shops:</h2>
         <ul>
-          {vendors.map((vendorId: string) => (
+          {vendors?.map((vendorId: string) => (
             <li key={vendorId}>
               <Link href={`/shop/${vendorId}`}>{vendorId}</Link>
             </li>
