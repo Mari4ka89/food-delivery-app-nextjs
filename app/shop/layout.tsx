@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import Link from "next/link";
-import { getVendors } from "../api/vendors/getVendors";
+import { getVendors } from "app/api/vendors/getVendors";
 
 type ShopLayoutProps = {
   vendors: string[];

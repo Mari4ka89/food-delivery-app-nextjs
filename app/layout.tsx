@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 import { Metadata } from "next";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import "./global.css";
+import Footer from "components/Footer";
+import Nav from "components/Nav";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Food Delivery",
@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body>
         <div>
-          <Header />
+          <Nav />
           <main className="flex flex-row container">{children}</main>
           <Footer />
         </div>

@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 
 export default function ErrorWraper({
   error,
@@ -7,6 +8,10 @@ export default function ErrorWraper({
   error: Error;
   reset: () => void;
 }) {
+  useEffect(() => {
+    console.error(error);
+  }, [error]);
+
   // TODO: update button background color to match with links color
   return (
     <div>

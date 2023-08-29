@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { getMenuItems } from "../../api/menuItems/getMenuItems";
+import { getMenuItems } from "app/api/menuItems/getMenuItems";
 
 type MenuItemsProps = {
   params: {
@@ -11,7 +11,7 @@ export async function generateMetadata({
   params: { vendorId },
 }: MenuItemsProps): Promise<Metadata> {
   return {
-    title: vendorId,
+    title: `${vendorId} | Food Delivery`,
   };
 }
 
