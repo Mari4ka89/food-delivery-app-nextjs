@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { getMenuItems } from "app/api/menuItems/getMenuItems";
+import MenuItem from "components/MenuItem";
 
 type MenuItemsProps = {
   params: {
@@ -21,10 +22,10 @@ export default async function MenuItems({
   const menuItems = await getMenuItems(vendorId);
 
   return (
-    <ul>
+    <div className="grid grid-cols-2 gap-12">
       {menuItems.map((item: any) => (
-        <li key={item.id}>{item.title}</li>
+        <MenuItem key={item.id} info={item} />
       ))}
-    </ul>
+    </div>
   );
 }

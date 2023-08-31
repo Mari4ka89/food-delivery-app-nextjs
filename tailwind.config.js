@@ -6,9 +6,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    container: {
-      center: true,
-      padding: "1rem",
+    extend: {
+      container: {
+        center: true,
+        padding: "1rem",
+      },
     },
   },
   plugins: [],

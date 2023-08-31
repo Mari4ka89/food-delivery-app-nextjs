@@ -1,15 +1,10 @@
 "use client";
 import { ButtonProps } from "types";
 
-const Button = ({ title, containerStyles, handleClick }: ButtonProps) => {
+const Button = ({ children, onClick }: ButtonProps) => {
   return (
-    <button
-      disabled={false}
-      type="button"
-      className={`custom-btn ${containerStyles}`}
-      onClick={handleClick}
-    >
-      {title}
+    <button type="button" className="custom-btn" onClick={onClick}>
+      {children}
     </button>
   );
 };

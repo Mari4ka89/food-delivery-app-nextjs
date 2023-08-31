@@ -12,17 +12,19 @@ export default async function ShopLayout({ children }: ShopLayoutProps) {
 
   return (
     <>
-      <div className="basis-1/3">
-        <h2 className="text-center">Shops:</h2>
+      <div className="basis-1/4 bordered text-center py-4 px-16">
+        <h2>Shops:</h2>
         <ul>
           {vendors?.map((vendorId: string) => (
-            <li key={vendorId}>
+            <li className="bordered my-4 py-4 px-16" key={vendorId}>
               <Link href={`/shop/${vendorId}`}>{vendorId}</Link>
             </li>
           ))}
         </ul>
       </div>
-      <div className="basis-2/3">{children}</div>
+      <div className="basis-3/4 bordered overflow-auto py-4 px-16">
+        {children}
+      </div>
     </>
   );
 }
