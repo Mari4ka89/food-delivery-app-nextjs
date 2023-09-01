@@ -10,7 +10,9 @@ const MenuItem = ({
 
   return (
     <div className="bordered p-4">
-      <Image src={image} alt={title} height={200} width={400} />
+      <div className="w-full h-80 relative">
+        <Image src={image} alt={title} fill />
+      </div>
 
       <div className="flex justify-between">
         <div>
