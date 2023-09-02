@@ -2,10 +2,13 @@
 import React from "react";
 import Image from "next/image";
 import Button from "./Button";
+import type { Product } from "./../types/index";
 
 const MenuItem = ({
-  info: { title, price, image }, // category, id
-}) => {
+  title,
+  price,
+  image, // category, id
+}: Product) => {
   const handleAddToCart = () => {};
 
   return (
@@ -14,7 +17,7 @@ const MenuItem = ({
         <Image src={image} alt={title} fill />
       </div>
 
-      <div className="flex justify-between">
+      <div className="flex justify-between pt-4">
         <div>
           <h5>{title}</h5>
           <h6>{price}₴</h6>

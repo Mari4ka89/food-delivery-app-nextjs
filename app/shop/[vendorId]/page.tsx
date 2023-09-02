@@ -24,7 +24,7 @@ export default async function MenuItems({
   return (
     <div className="grid grid-cols-2 gap-x-12 gap-y-8">
       {menuItems.map((item: any) => (
-        <MenuItem key={item.id} info={item} />
+        <MenuItem key={item.id} {...item} />
       ))}
     </div>
   );

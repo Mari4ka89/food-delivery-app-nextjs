@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import Link from "next/link";
 import { getVendors } from "app/api/vendors/getVendors";
+import ShopMenuLink from "components/ShopMenuLink";
 
 type ShopLayoutProps = {
   vendors: string[];
@@ -16,9 +16,7 @@ export default async function ShopLayout({ children }: ShopLayoutProps) {
         <h2>Shops:</h2>
         <ul>
           {vendors?.map((vendorId: string) => (
-            <li className="bordered my-4 py-4 px-16" key={vendorId}>
-              <Link href={`/shop/${vendorId}`}>{vendorId}</Link>
-            </li>
+            <ShopMenuLink key={vendorId} vendorId={vendorId} />
           ))}
         </ul>
       </div>
