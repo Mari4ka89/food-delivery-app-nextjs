@@ -15,13 +15,14 @@ const ShopMenuLink = ({ vendorId }: ShopMenuLinkProps) => {
   return (
     <li
       key={vendorId}
-      className={clsx("bordered my-4 py-4 px-16", {
-        "bg-sky-500 text-white": isActive,
+      className={clsx("my-4", {
+        "bg-sky-500 border-sky-500 text-white rounded-sm": isActive,
+        bordered: !isActive,
       })}
     >
       <Link
         href={path}
-        className={clsx({
+        className={clsx("w-full h-full block p-4", {
           "text-white": isActive,
         })}
       >

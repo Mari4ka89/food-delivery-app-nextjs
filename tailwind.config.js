@@ -11,6 +11,13 @@ module.exports = {
         center: true,
         padding: "1rem",
       },
+      keyframes: {
+        shimmer: {
+          "100%": {
+            transform: "translateX(100%)",
+          },
+        },
+      },
     },
   },
   plugins: [],
