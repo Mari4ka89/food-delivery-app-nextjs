@@ -14,7 +14,7 @@ const MenuItem = ({
   return (
     <div className="bordered p-4">
       <div className="w-full h-80 relative">
-        <Image src={image} alt={title} fill />
+        <Image src={image} alt={title} fill priority />
       </div>
 
       <div className="flex justify-between pt-4">

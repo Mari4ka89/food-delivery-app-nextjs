@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { Metadata } from "next";
 import Footer from "components/Footer";
-import Nav from "components/Nav";
+import Navbar from "components/Navbar";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -10,16 +10,15 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  // TODO: remove div className="flex flex-col h-full", extract layout to upper level.
   return (
     <html lang="en">
-      <body>
-        <div className="flex flex-col h-full">
-          <Nav />
-          <main className="flex flex-row flex-1 overflow-hidden gap-x-2 container">
-            {children}
-          </main>
-          <Footer />
-        </div>
+      <body className="flex flex-col h-full">
+        <Navbar />
+        <main className="flex flex-row flex-1 overflow-hidden gap-x-2 container">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
