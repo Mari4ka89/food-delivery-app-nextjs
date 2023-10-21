@@ -12,6 +12,7 @@ export type Product = {
 };
 
 export type MenuItemProps = Product & {
-  productId: string;
+  id: number;
   quantity: number;
+  category: string;
 };

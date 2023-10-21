@@ -2,15 +2,11 @@
 import React from "react";
 import Image from "next/image";
 import Button from "./Button";
-import type { Product } from "./../types/index";
+import type { MenuItemProps } from "./../types/index";
+import { addToCart } from "actions/add-to-cart-action";
+import { toast } from "react-hot-toast";
 
-const MenuItem = ({
-  title,
-  price,
-  image, // category, id
-}: Product) => {
-  const handleAddToCart = () => {};
-
+const MenuItem = ({ title, price, image, category, id }: MenuItemProps) => {
   return (
     <div className="bordered p-4">
       <div className="w-full h-80 relative">
@@ -22,7 +18,24 @@ const MenuItem = ({
           <h5>{title}</h5>
           <h6>{price}₴</h6>
         </div>
-        <Button onClick={handleAddToCart}>Add to Cart</Button>
+        <Button
+          onClick={async () => {
+            const result = await addToCart({
+              id,
+              title,
+              price,
+              image,
+              category,
+              quantity: 1,
+            });
+
+            if (result?.error) {
+              toast.error(result.error);
+            }
+          }}
+        >
+          Add to Cart
+        </Button>
       </div>
     </div>
   );
