@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Button from "./Button";
 import type { MenuItemProps } from "./../types/index";
-import { addToCart } from "actions/add-to-cart-action";
+import { addToCart } from "actions/addToCart";
 import { toast } from "react-hot-toast";
 
 const MenuItem = ({ title, price, image, category, id }: MenuItemProps) => {
