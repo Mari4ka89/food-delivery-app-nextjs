@@ -1,7 +1,7 @@
 import { Schema, model, models } from "mongoose";
-import { MenuItemProps } from "../types";
+import { MenuItem } from "../types";
 
-const CartItemSchema = new Schema<MenuItemProps>({
+const CartItemSchema = new Schema<MenuItem>({
   id: {
     type: Number,
     required: true,
@@ -11,19 +11,13 @@ const CartItemSchema = new Schema<MenuItemProps>({
     type: Number,
     required: [true, "Quantity is required"],
   },
-  image: {
-    type: String,
-  },
-  title: {
-    type: String,
-  },
+  image: String,
+  title: String,
   price: {
     type: Number,
     required: [true, "Price is required"],
   },
-  category: {
-    type: String,
-  },
+  category: String,
 });
 
 const CartItem = models.CartItem || model("CartItem", CartItemSchema);

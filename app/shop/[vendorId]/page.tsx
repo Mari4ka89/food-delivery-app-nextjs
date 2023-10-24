@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { getMenuItems } from "app/api/menuItems/getMenuItems";
 import MenuItem from "components/MenuItem";
 
-type MenuItemsProps = {
+type MenuProps = {
   params: {
     vendorId: string;
   };
@@ -10,15 +10,13 @@ type MenuItemsProps = {
 
 export async function generateMetadata({
   params: { vendorId },
-}: MenuItemsProps): Promise<Metadata> {
+}: MenuProps): Promise<Metadata> {
   return {
     title: `${vendorId} | Food Delivery`,
   };
 }
 
-export default async function MenuItems({
-  params: { vendorId },
-}: MenuItemsProps) {
+export default async function Menu({ params: { vendorId } }: MenuProps) {
   const menuItems = await getMenuItems(vendorId);
 
   return (

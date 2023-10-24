@@ -1,11 +1,10 @@
-export type Product = {
+export type MenuItemProps = {
   image: string;
   title: string;
   price: number;
-};
-
-export type MenuItemProps = Product & {
   id: number;
   quantity: number;
   category: string;
 };
+
+export type MenuItem = MenuItemProps;

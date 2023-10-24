@@ -5,6 +5,7 @@
       "@/components/*": ["components/*"],
       "@/utils/*": ["utils/*"],
       "@/types/*": ["types/*"],
+      "@/models/*": ["models/*"],
       "@/app/*": ["app/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],

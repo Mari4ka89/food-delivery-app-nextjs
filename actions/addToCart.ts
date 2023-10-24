@@ -1,9 +1,9 @@
 "use server";
-import CartItem from "models/cartItem";
+import CartItem from "models/CartItem";
 import { connectToDB } from "@/utils/database";
-import type { MenuItemProps } from "../types/index";
+import type { MenuItem } from "../types/index";
 
-export const addToCart = async (item: MenuItemProps) => {
+export const addToCart = async (item: MenuItem) => {
   try {
     await connectToDB();
     await CartItem.create(item);
