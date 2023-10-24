@@ -1,10 +1,7 @@
-"use client";
 import React from "react";
 import Image from "next/image";
-import Button from "./Button";
 import type { MenuItemProps } from "./../types/index";
-import { addToCart } from "actions/addToCart";
-import { toast } from "react-hot-toast";
+import AddToCartBtn from "app/cart/AddToCartBtn";
 
 const MenuItem = ({ title, price, image, category, id }: MenuItemProps) => {
   return (
@@ -18,24 +15,7 @@ const MenuItem = ({ title, price, image, category, id }: MenuItemProps) => {
           <h5>{title}</h5>
           <h6>{price}₴</h6>
         </div>
-        <Button
-          onClick={async () => {
-            const result = await addToCart({
-              id,
-              title,
-              price,
-              image,
-              category,
-              quantity: 1,
-            });
-
-            if (result?.error) {
-              toast.error(result.error);
-            }
-          }}
-        >
-          Add to Cart
-        </Button>
+        <AddToCartBtn item={{ title, price, image, category, id }} />
       </div>
     </div>
   );

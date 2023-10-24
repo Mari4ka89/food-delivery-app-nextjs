@@ -1,12 +1,7 @@
-"use client";
-import { ButtonProps } from "types";
+import { ButtonHTMLAttributes } from "react";
 
-const Button = ({ children, onClick }: ButtonProps) => {
-  return (
-    <button type="button" className="custom-btn" onClick={onClick}>
-      {children}
-    </button>
-  );
-};
+const Button = (props: ButtonHTMLAttributes<HTMLButtonElement>) => (
+  <button type="button" className="custom-btn" {...props} />
+);
 
 export default Button;
