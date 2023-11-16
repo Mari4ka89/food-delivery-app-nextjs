@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { getCartItems } from "../api/cartItems/getCartItems";
-import { MenuItem } from "../../types";
+import { MenuItem } from "../../lib/types";
 
 export const metadata: Metadata = {
   title: "Cart | Food Delivery",
