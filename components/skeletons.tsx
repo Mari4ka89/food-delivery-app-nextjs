@@ -4,9 +4,7 @@ const shimmer =
 const MenuItemSkeleton = () => {
   return (
     <div
-      className={
-        "${shimmer} bordered p-4 relative overflow-hidden rounded-xl bg-white/5"
-      }
+      className={`${shimmer} bordered p-4 relative overflow-hidden rounded-xl bg-white/5`}
     >
       <div className="w-full h-80 rounded-lg bg-slate-100" />
 

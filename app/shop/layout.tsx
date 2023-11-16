@@ -21,7 +21,7 @@ export default async function ShopLayout({ children }: ShopLayoutProps) {
         </ul>
       </div>
       <div className="basis-3/4 bordered overflow-auto py-4 px-16">
-        {children}
+        <div className="grid grid-cols-2 gap-x-12 gap-y-8">{children}</div>
       </div>
     </>
   );

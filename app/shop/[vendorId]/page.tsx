@@ -19,11 +19,5 @@ export async function generateMetadata({
 export default async function Menu({ params: { vendorId } }: MenuProps) {
   const menuItems = await getMenuItems(vendorId);
 
-  return (
-    <div className="grid grid-cols-2 gap-x-12 gap-y-8">
-      {menuItems.map((item: any) => (
-        <MenuItem key={item.id} {...item} />
-      ))}
-    </div>
-  );
+  return menuItems.map((item: any) => <MenuItem key={item.id} {...item} />);
 }
