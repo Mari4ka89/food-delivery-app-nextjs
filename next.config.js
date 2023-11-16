@@ -5,7 +5,13 @@
  **/
 const nextConfig = {
   experimental: {
-    serverActions: true,
+    typedRoutes: true,
+    optimizePackageImports: [
+      "tailwindcss",
+      "mongoose",
+      "react-hot-toast",
+      "typescript",
+    ],
   },
   images: {
     domains: [
