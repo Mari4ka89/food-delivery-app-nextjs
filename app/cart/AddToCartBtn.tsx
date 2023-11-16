@@ -1,5 +1,4 @@
 "use client";
-import { toast } from "react-hot-toast";
 import { addToCart } from "actions/addToCart";
 import Button from "components/Button";
 
@@ -10,7 +9,7 @@ const AddToCartBtn = ({ item }) => {
         const result = await addToCart({ ...item, quantity: 1 });
 
         if (result?.error) {
-          toast.error(result.error);
+          console.log(result.error);
         }
       }}
     >
