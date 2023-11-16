@@ -14,10 +14,16 @@ const nextConfig = {
     ],
   },
   images: {
-    domains: [
-      "d3tqkqn8yl74v5.cloudfront.net",
-      "www.kfc-ukraine.com",
-      "cdn.sanity.io",
+    remotePatterns: [
+      {
+        hostname: "d3tqkqn8yl74v5.cloudfront.net",
+      },
+      {
+        hostname: "www.kfc-ukraine.com",
+      },
+      {
+        hostname: "cdn.sanity.io",
+      },
     ],
   },
 };
