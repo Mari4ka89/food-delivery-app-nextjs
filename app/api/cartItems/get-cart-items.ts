@@ -1,5 +1,5 @@
 import "server-only";
-import CartItem from "@/models/CartItem";
+import CartItem from "@/models/cart-item";
 import { connectToDB } from "@/utils/database";
 import type { MenuItem } from "@/lib/types";
 

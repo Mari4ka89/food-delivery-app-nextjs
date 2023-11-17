@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { getCartItems } from "@/app/api/cartItems/getCartItems";
+import { getCartItems } from "@/app/api/cartItems/get-cart-items";
 import { MenuItem } from "@/lib/types";
 
 export const metadata: Metadata = {
