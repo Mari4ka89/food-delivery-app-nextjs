@@ -1,7 +1,7 @@
 import "server-only";
-import CartItem from "models/CartItem";
-import { connectToDB } from "utils/database";
-import type { MenuItem } from "lib/types";
+import CartItem from "@/models/CartItem";
+import { connectToDB } from "@/utils/database";
+import type { MenuItem } from "@/lib/types";
 
 export async function getCartItems() {
   try {

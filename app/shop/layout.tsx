@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import { getVendors } from "app/api/vendors/getVendors";
-import ShopMenuLink from "components/ShopMenuLink";
+import { getVendors } from "@/app/api/vendors/getVendors";
+import ShopMenuLink from "@/components/ShopMenuLink";
 
 type ShopLayoutProps = {
   children: ReactNode;

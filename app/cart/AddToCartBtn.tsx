@@ -1,6 +1,6 @@
 "use client";
-import { addToCart } from "actions/addToCart";
-import Button from "components/Button";
+import { addToCart } from "@/actions/addToCart";
+import Button from "@/components/Button";
 
 const AddToCartBtn = ({ item }) => {
   return (
