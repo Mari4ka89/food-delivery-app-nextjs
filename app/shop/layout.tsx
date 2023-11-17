@@ -3,7 +3,6 @@ import { getVendors } from "app/api/vendors/getVendors";
 import ShopMenuLink from "components/ShopMenuLink";
 
 type ShopLayoutProps = {
-  vendors: string[];
   children: ReactNode;
 };
 

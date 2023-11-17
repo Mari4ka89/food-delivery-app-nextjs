@@ -5,7 +5,6 @@
  **/
 const nextConfig = {
   experimental: {
-    typedRoutes: true,
     optimizePackageImports: [
       "tailwindcss",
       "mongoose",
