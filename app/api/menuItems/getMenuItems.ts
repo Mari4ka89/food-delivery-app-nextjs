@@ -1,6 +1,6 @@
 import "server-only";
 import { notFound } from "next/navigation";
-import { MenuItem } from "@/types/types";
+import { MenuItem } from "lib/types";
 
 export async function getMenuItems(vendorId: string) {
   const response = await fetch(
