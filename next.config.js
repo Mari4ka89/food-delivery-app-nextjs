@@ -2,12 +2,7 @@
 
 const nextConfig = {
   experimental: {
-    optimizePackageImports: [
-      "tailwindcss",
-      "mongoose",
-      "react-hot-toast",
-      "typescript",
-    ],
+    optimizePackageImports: ["tailwindcss", "typescript"],
   },
   images: {
     remotePatterns: [
