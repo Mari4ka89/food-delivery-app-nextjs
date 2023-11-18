@@ -12,7 +12,7 @@ const QuantityInput = ({ quantity, id }: QuantityInputProps) => {
   return (
     <input
       type="number"
-      className="form-control w-50"
+      className="bordered w-1/2"
       onChange={async (e: ChangeEvent<HTMLInputElement>) => {
         await updateItemQuantity(id, parseInt(e.target.value || "0"));
       }}

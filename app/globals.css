@@ -28,7 +28,7 @@ img {
 }
 
 .bordered {
-  @apply rounded border-slate-200 border-2;
+  @apply rounded border-slate-200 border;
 }
 
 .custom-btn {

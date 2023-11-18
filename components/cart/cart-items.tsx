@@ -5,16 +5,18 @@ const CartItem = ({ product }: { product: MenuItem }) => {
   const { image, title, price, quantity, id } = product;
 
   return (
-    <li className="flex">
+    <li className="flex bordered mb-4">
       <img
         src={image}
         alt={title}
-        className="h-48 w-48 object-cover object-center"
+        className="h-44 w-44 object-cover object-center"
       />
-      <div>
-        <h5>{title}</h5>
-        <h6>Price: {price}₴</h6>
-        <QuantityInput quantity={quantity} id={id} />
+      <div className="grow">
+        <div className="flex justify-center items-center h-full flex-col">
+          <h5>{title}</h5>
+          <h6 className="my-1">Price: {price}₴</h6>
+          <QuantityInput quantity={quantity} id={id} />
+        </div>
       </div>
     </li>
   );
