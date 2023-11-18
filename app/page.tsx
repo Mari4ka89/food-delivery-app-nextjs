@@ -1,5 +1,5 @@
 import { redirect, notFound } from "next/navigation";
-import { getVendors } from "@/app/api/vendors/get-vendors";
+import { getVendors } from "@/lib/actions";
 
 export default async function Home() {
   const vendors = await getVendors();

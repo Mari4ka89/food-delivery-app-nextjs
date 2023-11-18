@@ -8,3 +8,4 @@ export type MenuItemProps = {
 };
 
 export type MenuItem = MenuItemProps;
+export type MenuItems = MenuItem[];

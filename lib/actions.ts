@@ -1,5 +1,5 @@
-import "server-only";
-import type { MenuItem } from "@/lib/types";
+"use server";
+import type { MenuItems, MenuItem } from "@/lib/types";
 import CartItem from "@/models/cart-item";
 import { connectToDB } from "@/utils/database";
 import { notFound } from "next/navigation";
@@ -8,7 +8,7 @@ export async function fetchCartItems() {
   try {
     await connectToDB();
 
-    const cartItems = (await CartItem.find({})) as MenuItem[];
+    const cartItems = (await CartItem.find({})) as MenuItems;
 
     return cartItems;
   } catch (error) {
@@ -41,7 +41,7 @@ export async function getMenuItems(vendorId: string) {
     throw new Error("Unable to fetch menu items.");
   }
 
-  const menuItems = (await response.json()) as MenuItem[];
+  const menuItems = (await response.json()) as MenuItems;
 
   if (menuItems.length === 0) {
     notFound();

@@ -1,38 +1,20 @@
 import { Metadata } from "next";
-import { getCartItems } from "@/app/api/cartItems/get-cart-items";
-import { MenuItem } from "@/lib/types";
+import { fetchCartItems } from "@/lib/actions";
+import type { MenuItems } from "@/lib/types";
+import CartItems from "@/components/cart/cart-items";
 
 export const metadata: Metadata = {
   title: "Cart | Food Delivery",
 };
 
 export default async function Cart() {
-  const products = (await getCartItems()) as MenuItem[];
+  const products = (await fetchCartItems()) as MenuItems;
 
   return (
     <>
       <div className="basis-1/2 bordered text-center p-4">Form</div>
       <div className="basis-1/2 bordered text-center p-4">
-        {Array.isArray(products) && products.length ? (
-          <ul>
-            {products.map(({ id, title, image, price, quantity }) => (
-              <li key={id} className="flex">
-                <img
-                  src={image}
-                  alt={title}
-                  className="h-48 w-48 object-cover object-center"
-                />
-                <div>
-                  <h3>{title}</h3>
-                  <p>{price}</p>
-                  <p>{quantity}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <div>Your cart is empty</div>
-        )}
+        <CartItems products={products} />
       </div>
     </>
   );

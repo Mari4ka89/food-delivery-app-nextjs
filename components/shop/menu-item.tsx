@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import type { MenuItemProps } from "@/lib/types";
-import AddToCartBtn from "@/app/cart/add-to-cart-btn";
+import AddToCartBtn from "@/components/cart/add-to-cart-btn";
 
 const MenuItem = ({ title, price, image, category, id }: MenuItemProps) => {
   return (

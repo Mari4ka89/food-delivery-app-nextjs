@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import { getMenuItems } from "@/app/api/menuItems/get-menu-items";
-import MenuItem from "@/components/menu-item";
+import { getMenuItems } from "@/lib/actions";
+import MenuItem from "@/components/shop/menu-item";
 
 type MenuProps = {
   params: {

@@ -10,14 +10,7 @@ export default function Footer() {
       >
         Open-source code
       </a>{" "}
-      by Mariia Bezrukava which is{" "}
-      <a
-        href="https://eloquent-lolly-85c74a.netlify.app/"
-        className="underline"
-        target="_blank"
-      >
-        hosted on Netlify
-      </a>
+      by Mariia Bezrukava
     </footer>
   );
 }
