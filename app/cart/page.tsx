@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { fetchCartItems } from "@/lib/actions";
+import { fetchCartItems } from "@/lib/data";
 import type { MenuItems } from "@/lib/types";
 import CartItems from "@/components/cart/cart-items";
 

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { getVendors } from "@/lib/actions";
+import { getVendors } from "@/lib/data";
 import ShopMenuLink from "@/components/shop/shop-menu-link";
 
 type ShopLayoutProps = {

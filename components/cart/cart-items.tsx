@@ -1,7 +1,9 @@
 import type { MenuItems, MenuItem } from "@/lib/types";
+import QuantityInput from "./quantity-input";
 
 const CartItem = ({ product }: { product: MenuItem }) => {
-  const { image, title, price, quantity } = product;
+  const { image, title, price, quantity, id } = product;
+
   return (
     <li className="flex">
       <img
@@ -10,9 +12,9 @@ const CartItem = ({ product }: { product: MenuItem }) => {
         className="h-48 w-48 object-cover object-center"
       />
       <div>
-        <h3>{title}</h3>
-        <p>{price}</p>
-        <p>{quantity}</p>
+        <h5>{title}</h5>
+        <h6>Price: {price}₴</h6>
+        <QuantityInput quantity={quantity} id={id} />
       </div>
     </li>
   );
