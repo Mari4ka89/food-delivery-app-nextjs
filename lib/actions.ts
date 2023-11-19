@@ -35,6 +35,7 @@ export const deleteCartItem = async (id: MenuItem["id"]) => {
   try {
     await connectToDB();
     await CartItem.findOneAndDelete({ id });
+    revalidatePath("/cart", "layout");
   } catch (error) {
     console.error("Database Error:", error);
     throw new Error("Failed to remove item from cart.");
@@ -52,6 +53,7 @@ export const updateItemQuantity = async (
       { quantity },
       { returnOriginal: false }
     );
+    revalidatePath("/cart", "layout");
   } catch (error) {
     console.error("Database Error:", error);
     throw new Error("Failed to update cart item quantity.");
