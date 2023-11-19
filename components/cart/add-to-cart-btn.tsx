@@ -3,7 +3,7 @@ import { addToCart } from "@/lib/actions";
 import Button from "@/components/button";
 import { MenuItem } from "@/lib/types";
 
-const AddToCartBtn = ({ item }: { item: MenuItem }) => {
+const AddToCartBtn = ({ item }: { item: Omit<MenuItem, "quantity"> }) => {
   return (
     <Button
       onClick={async () => {
