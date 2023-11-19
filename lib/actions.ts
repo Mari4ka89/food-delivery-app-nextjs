@@ -13,6 +13,16 @@ export const addToCart = async (item: MenuItem) => {
   }
 };
 
+export const deleteCartItem = async (id: MenuItem["id"]) => {
+  try {
+    await connectToDB();
+    await CartItem.findOneAndDelete({ id });
+  } catch (error) {
+    console.error("Database Error:", error);
+    throw new Error("Failed to remove item from cart.");
+  }
+};
+
 export const updateItemQuantity = async (
   id: MenuItem["id"],
   quantity: MenuItem["quantity"]
