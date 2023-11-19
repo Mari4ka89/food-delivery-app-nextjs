@@ -3,7 +3,9 @@ import Image from "next/image";
 import type { MenuItemProps } from "@/lib/types";
 import AddToCartBtn from "@/components/cart/add-to-cart-btn";
 
-const MenuItem = ({ title, price, image, category, id }: MenuItemProps) => {
+const MenuItem = (item: MenuItemProps) => {
+  const { title, price, image } = item;
+
   return (
     <div className="bordered p-4">
       <div className="w-full h-80 relative">
@@ -15,7 +17,7 @@ const MenuItem = ({ title, price, image, category, id }: MenuItemProps) => {
           <h5>{title}</h5>
           <h6>{price}₴</h6>
         </div>
-        <AddToCartBtn item={{ title, price, image, category, id }} />
+        <AddToCartBtn item={item} />
       </div>
     </div>
   );
