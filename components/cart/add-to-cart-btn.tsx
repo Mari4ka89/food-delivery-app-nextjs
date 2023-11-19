@@ -1,13 +1,13 @@
 "use client";
 import { addToCart } from "@/lib/actions";
 import Button from "@/components/button";
-import { MenuItem } from "@/lib/types";
+import type { MenuItem } from "@/lib/types";
 
-const AddToCartBtn = ({ item }: { item: Omit<MenuItem, "quantity"> }) => {
+const AddToCartBtn = ({ item }: { item: MenuItem }) => {
   return (
     <Button
       onClick={async () => {
-        await addToCart({ ...item, quantity: 1 });
+        await addToCart(item);
       }}
     >
       Add to Cart

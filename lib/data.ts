@@ -1,10 +1,13 @@
 "use server";
+import { notFound } from "next/navigation";
+import { unstable_noStore as noStore } from "next/cache";
 import type { MenuItems } from "@/lib/types";
 import CartItem from "@/models/cart-item";
 import { connectToDB } from "@/utils/database";
-import { notFound } from "next/navigation";
 
 export async function fetchCartItems() {
+  noStore();
+
   try {
     await connectToDB();
 
