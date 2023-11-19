@@ -3,6 +3,7 @@ import { deleteCartItem } from "@/lib/actions";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import type { MenuItem } from "@/lib/types";
 
+// TODO: update cart after item deletion
 const DeleteItemBtn = ({ id }: { id: MenuItem["id"] }) => {
   return (
     <XMarkIcon
